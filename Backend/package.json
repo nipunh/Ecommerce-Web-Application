@@ -4,12 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build ",
-    "start": "nodemon app.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently -n 'app,client' -c 'red,green'  \"nodemon app.js\" \"npm run client\""
+    "start": "node app.js",
   },
   "author": "Nipun",
   "license": "ISC",
@@ -33,5 +28,9 @@
     "react-bootstrap": "^1.0.1",
     "stripe": "^8.52.0",
     "uuid": "^7.0.3"
+  },
+
+  "engines": {
+    "node" : "15.6.0"
   }
 }
